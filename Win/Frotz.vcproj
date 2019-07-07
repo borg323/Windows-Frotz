@@ -41,7 +41,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/MACHINE:I386"
-				AdditionalDependencies="dsound.lib scalegfx.lib"
+				AdditionalDependencies="Nafxcwd.lib Libcmtd.lib dsound.lib scalegfx.lib"
 				OutputFile=".\Debug/Frotz.exe"
 				LinkIncremental="2"
 				SuppressStartupBanner="TRUE"
@@ -103,7 +103,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/MACHINE:I386"
-				AdditionalDependencies="dsound.lib scalegfx.lib"
+				AdditionalDependencies="Nafxcw.lib Libcmt.lib dsound.lib scalegfx.lib"
 				OutputFile=".\Release/Frotz.exe"
 				LinkIncremental="1"
 				SuppressStartupBanner="TRUE"
