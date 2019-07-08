@@ -21,9 +21,9 @@ install:
 - cmd: IF NOT EXIST c:\projects\Libraries\libpng 7z x lpng1637.zip -oc:\projects\Libraries
 - cmd: IF NOT EXIST c:\projects\Libraries\libpng ren c:\projects\Libraries\lpng1637 libpng
 - cmd: IF NOT EXIST c:\projects\Libraries\libpng\pnglibconf.h copy c:\projects\Libraries\libpng\scripts\pnglibconf.h.prebuilt c:\projects\Libraries\libpng\pnglibconf.h
-- cmd: IF NOT EXIST c:\projects\Libraries\jpeg appveyor DownloadFile https://sourceforge.net/projects/libjpeg/files/libjpeg/6b/jpegsr6.zip
-- cmd: IF NOT EXIST c:\projects\Libraries\jpeg 7z x jpegsr6.zip -oc:\projects\Libraries
-- cmd: IF NOT EXIST c:\projects\Libraries\jpeg ren c:\projects\Libraries\jpeg-6b jpeg
+- cmd: IF NOT EXIST c:\projects\Libraries\jpeg appveyor DownloadFile https://www.ijg.org/files/jpegsr9c.zip
+- cmd: IF NOT EXIST c:\projects\Libraries\jpeg 7z x jpegsr9c.zip -oc:\projects\Libraries
+- cmd: IF NOT EXIST c:\projects\Libraries\jpeg ren c:\projects\Libraries\jpeg-9c jpeg
 - cmd: IF NOT EXIST c:\projects\Libraries\jpeg\jconfig.h ren c:\projects\Libraries\jpeg\jconfig.vc jconfig.h
 - cmd: cd C:\projects\src\Windows-Frotz\Win
 cache:
