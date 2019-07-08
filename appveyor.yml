@@ -25,6 +25,8 @@ install:
 - cmd: IF NOT EXIST c:\projects\Libraries\jpeg 7z x jpegsr9c.zip -oc:\projects\Libraries
 - cmd: IF NOT EXIST c:\projects\Libraries\jpeg ren c:\projects\Libraries\jpeg-9c jpeg
 - cmd: IF NOT EXIST c:\projects\Libraries\jpeg\jconfig.h ren c:\projects\Libraries\jpeg\jconfig.vc jconfig.h
+- cmd: cd c:\projects\Libraries
+- cmd: git pull
 - cmd: cd C:\projects\src\Windows-Frotz\Win
 cache:
   - c:\projects\Libraries
