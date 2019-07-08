@@ -20,7 +20,7 @@ install:
 - cmd: IF NOT EXIST c:\projects\Libraries\libpng appveyor DownloadFile https://sourceforge.net/projects/libpng/files/libpng16/1.6.37/lpng1637.zip
 - cmd: IF NOT EXIST c:\projects\Libraries\libpng 7z x lpng1637.zip -oc:\projects\Libraries
 - cmd: IF NOT EXIST c:\projects\Libraries\libpng ren c:\projects\Libraries\lpng1637 libpng
-- cmd: IF NOT EXIST c:\projects\Libraries\libpng\pnglibconf.h copy c:\projects\Libraries\libpng\scripts\pnglibconf.h.prebuilt c:\projects\Libraries\libpng\pnglibconf.h
+- cmd: IF NOT EXIST c:\projects\Libraries\libpng\pnglibconf.h grep -v PNG_SAVE_ c:\projects\Libraries\libpng\scripts\pnglibconf.h.prebuilt | grep -v PNG_WRITE_ | grep -v PNG_SIMPLIFIED_WRITE_ > c:\projects\Libraries\libpng\pnglibconf.h
 - cmd: IF NOT EXIST c:\projects\Libraries\jpeg appveyor DownloadFile https://www.ijg.org/files/jpegsr9c.zip
 - cmd: IF NOT EXIST c:\projects\Libraries\jpeg 7z x jpegsr9c.zip -oc:\projects\Libraries
 - cmd: IF NOT EXIST c:\projects\Libraries\jpeg ren c:\projects\Libraries\jpeg-9c jpeg
@@ -38,3 +38,4 @@ after_build:
 artifacts:
   - path: Win/Release/Frotz.exe
   - path: Win/Release/Frotz.zip
+
